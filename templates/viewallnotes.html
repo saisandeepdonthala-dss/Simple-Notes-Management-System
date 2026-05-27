@@ -1,0 +1,66 @@
+{% extends "dashboard.html" %}
+{% block addcss %}
+<link rel="stylesheet" href="/static/viewallnotes.css">{% endblock %}
+{% block content %}
+
+<div class="notes-wrapper">
+
+    <h2 class="page-title">All Notes</h2>
+
+    <div class="table-card">
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Note ID</th>
+                    <th>Title</th>
+                    <th>Created At</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                {% if allnotesdata %}
+
+                {% for i in allnotesdata %}
+
+                <tr>
+                    <td>{{ i[0] }}</td>
+                    <td>{{ i[1] }}</td>
+                    <td>{{ i[2] }}</td>
+
+                    <td class="actions">
+
+                        <a class="view-btn" href="{{ url_for('viewnotes', nid=i[0]) }}">
+                            View
+                        </a>
+
+                        <a class="edit-btn" href="{{ url_for('updatenotes', nid=i[0]) }}">
+                            Update
+                        </a>
+
+                        <a class="delete-btn"
+                           href="{{ url_for('deletenotes', nid=i[0]) }}"
+                           onclick="return confirm('Are you sure you want to delete this note?')">
+                            Delete
+                        </a>
+
+                    </td>
+
+                </tr>
+
+                {% endfor %}
+
+                {% endif %}
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+{% endblock %}

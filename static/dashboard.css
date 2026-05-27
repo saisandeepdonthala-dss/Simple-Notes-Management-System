@@ -1,0 +1,188 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+/* BODY */
+
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#1e293b,#0f172a);
+    color:white;
+}
+
+/* NAVBAR */
+
+.navbar{
+    background:#111827 !important;
+    padding:15px 30px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* BRAND */
+
+.navbar-brand{
+    font-size:28px;
+    font-weight:bold;
+    color:#38bdf8 !important;
+}
+
+/* NAV LINKS */
+
+.nav-link{
+    color:#e2e8f0 !important;
+    margin:0 10px;
+    transition:0.3s;
+}
+
+.nav-link:hover{
+    color:#38bdf8 !important;
+}
+
+/* DROPDOWN */
+
+.dropdown-menu{
+    background:#1e293b;
+    border:none;
+    border-radius:10px;
+}
+
+.dropdown-item{
+    color:white;
+    transition:0.3s;
+}
+
+.dropdown-item:hover{
+    background:#38bdf8;
+    color:#0f172a;
+}
+
+/* SEARCH BAR */
+
+.form-control{
+    border:none;
+    border-radius:10px;
+    padding:10px;
+}
+
+.form-control:focus{
+    box-shadow:none;
+    border:2px solid #38bdf8;
+}
+
+/* SEARCH BUTTON */
+
+.btn-search{
+    background:#38bdf8;
+    color:white;
+    border:none;
+    border-radius:10px;
+    padding:10px 16px;
+    transition:0.3s;
+}
+
+.btn-search:hover{
+    background:#0ea5e9;
+    color:white;
+}
+
+/* USER */
+
+.user-text{
+    margin-right:15px;
+    font-weight:bold;
+    color:#22c55e;
+}
+
+/* LOGOUT BUTTON */
+
+.btn-logout{
+    background:#ef4444;
+    color:white;
+    border:none;
+    border-radius:10px;
+    padding:10px 16px;
+    transition:0.3s;
+}
+
+.btn-logout:hover{
+    background:#dc2626;
+    color:white;
+}
+
+/* FLASH MESSAGE */
+
+.flash-container{
+    display:flex;
+    justify-content:center;
+    margin-top:20px;
+}
+
+.flash-message{
+    background:#22c55e;
+    padding:12px 20px;
+    border-radius:10px;
+    font-weight:bold;
+}
+
+/* WELCOME SECTION */
+
+.welcome-section{
+    height:85vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+/* CARD */
+
+.welcome-card{
+    background:white;
+    color:#111827;
+    padding:60px 40px;
+    border-radius:20px;
+    text-align:center;
+    width:100%;
+    max-width:800px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* TITLE */
+
+.welcome-card h1{
+    font-size:55px;
+    margin-bottom:15px;
+    color:#0f172a;
+}
+
+/* TEXT */
+
+.welcome-card p{
+    font-size:20px;
+    color:#475569;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .welcome-card{
+        padding:40px 20px;
+    }
+
+    .welcome-card h1{
+        font-size:36px;
+    }
+
+    .welcome-card p{
+        font-size:16px;
+    }
+
+    .navbar{
+        padding:15px;
+    }
+
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='logout.css') }}">
+</head>
+
+<body>
+
+    <div class="logout-wrapper">
+
+        <div class="logout-card">
+
+            <div class="icon">✔</div>
+
+            <h2>You Have Been Logged Out</h2>
+
+            <p>Thank you for using Notes Management System</p>
+
+            <a href="{{ url_for('login') }}" class="btn">
+                Login Again
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

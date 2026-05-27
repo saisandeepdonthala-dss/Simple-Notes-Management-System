@@ -1,0 +1,58 @@
+{% extends 'dashboard.html' %}
+
+{% block title %}
+<title>Update Notes</title>
+{% endblock %}
+
+{% block content %}
+
+<div class="update-notes-container">
+
+    <form method="POST" class="update-notes-form">
+
+        <h2>Update Notes</h2>
+
+        <!-- FLASH MESSAGES -->
+
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul>
+                    {% for msg in messages %}
+                        <li>{{ msg }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+
+        <!-- NOTE TITLE -->
+
+        <input type="text"
+               name="title"
+               value="{{ storednotesdata[1] }}"
+               placeholder="Enter Note Title"
+               required>
+
+        <!-- NOTE DESCRIPTION -->
+
+        <textarea name="description"
+                  rows="7"
+                  placeholder="Enter Note Description"
+                  required>{{ storednotesdata[2] }}</textarea>
+
+        <!-- CREATED DATE -->
+
+        <input type="text"
+               value="{{ storednotesdata[3] }}"
+               readonly>
+
+        <!-- UPDATE BUTTON -->
+
+        <button type="submit">
+            Update Notes
+        </button>
+
+    </form>
+
+</div>
+
+{% endblock %}
