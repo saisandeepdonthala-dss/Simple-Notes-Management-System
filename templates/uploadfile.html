@@ -1,20 +1,20 @@
 {% extends "dashboard.html" %}
 {% block addcss %}
-<link rel="stylesheet" href="/static/addnotes.css">{% endblock %}
+<link rel="stylesheet" href="/static/uploadfile.css">{% endblock %}
 {% block content %}
 
 <div class="add-notes-container">
 
     <div class="notes-card">
 
-        <h2>Uploade file</h2>
+        <h2>Upload File</h2>
 
         <form method="POST" enctype="multipart/form-data">
 
             <!-- TITLE -->
 
             <div class="form-group">
-                <label for="title">Uploade File</label>
+                <label for="title">Upload File</label>
 
                 <input 
                     type="file"
@@ -28,7 +28,7 @@
             <!-- BUTTON -->
 
             <button type="submit" class="save-btn">
-                Uploasde File
+                Upload File
             </button>
 
         </form>
