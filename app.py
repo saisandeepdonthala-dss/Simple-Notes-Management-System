@@ -7,7 +7,7 @@ from cmail import send_mail #used to send otp to email
 from stoken import endata,dndata #used to sign data pasing through urls
 from mysql.connector import (connection) #used to connect Mysql server
 import flask_excel as excel # used to generate excel files
-mydb=connection.MySQLConnection(user='root',host='localhost',password='Dss@1023',database='snm28db')
+mydb=connection.MySQLConnection(user='flaskuser',host='localhost',password='password',database='flaskdb')
 
 app=Flask(__name__)
 excel.init_excel(app) #initialize excel in flask app
