@@ -63,7 +63,7 @@ def otpverify(server_data):
             try:
                 #db connection 
                 cursor=mydb.cursor() # mysql cursor obj to execute mysql cmds
-                cursor.execute('insert into userdata(username,useremail,userpassword,userphone) values(%s,%s,%s,%s)',[d_data['username'],d_data['useremail'],d_data['userpassword'],d_data['user_phone']])
+                cursor.execute('insert into userdata(username,useremail,userpassword,userphoneno) values(%s,%s,%s,%s)',[d_data['username'],d_data['useremail'],d_data['userpassword'],d_data['user_phone']])
                 mydb.commit() #used to save data permenently
                 cursor.close()
             except Exception as e:
