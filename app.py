@@ -343,7 +343,7 @@ def getexceldata():
         array_data=[list(i) for i in allnotesdata]
         columns=['NotesID','NotesTitle','Notesdesc','CreatedTime']
         array_data.insert(0,columns)
-        return excel.make_response_from_array(array_data,'xlsx',file_name='Notesdata')
+        return excel.make_response_from_array(array_data,'xlsx',file_name='Notesdata.xlsx')
         return render_template('viewallnotes.html',allnotesdata=allnotesdata)   
     
 @app.route('/uploadfile',methods=['GET','POST'])

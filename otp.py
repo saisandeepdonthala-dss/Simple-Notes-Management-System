@@ -7,3 +7,4 @@ def genotp():
         otp=otp+random.choice(u_l)+str(random.randint(0,9))+random.choice(s_l)
     return otp
     
+    
